@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="skyGrad" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#141738"/>
+      <stop offset="60%" stop-color="#080918"/>
+      <stop offset="100%" stop-color="#05060F"/>
+    </radialGradient>
+    <radialGradient id="diyaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5B942" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#EA580C" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#05060F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="35%" stop-color="#F97316"/>
+      <stop offset="70%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#FEF08A"/>
+    </linearGradient>
+    <linearGradient id="clayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C2410C"/>
+      <stop offset="50%" stop-color="#9A3412"/>
+      <stop offset="100%" stop-color="#7C2D12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="100" fill="url(#skyGrad)"/>
+
+  <!-- Background Stars -->
+  <circle cx="120" cy="110" r="3" fill="#F5B942" opacity="0.8"/>
+  <circle cx="390" cy="90" r="2.5" fill="#BEE3F8" opacity="0.85"/>
+  <circle cx="430" cy="220" r="3.5" fill="#FB923C" opacity="0.75"/>
+  <circle cx="80" cy="280" r="2" fill="#F5B942" opacity="0.7"/>
+  <circle cx="210" cy="80" r="2.5" fill="#FDE047" opacity="0.9"/>
+  <circle cx="330" cy="150" r="3" fill="#BEE3F8" opacity="0.8"/>
+  <circle cx="100" cy="400" r="2" fill="#F5B942" opacity="0.6"/>
+  <circle cx="410" cy="380" r="3" fill="#FDE047" opacity="0.7"/>
+
+  <!-- Constellation Lines -->
+  <path d="M120 110 L210 80 L330 150 L390 90" stroke="#F5B942" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.4"/>
+
+  <!-- Candle/Diya Glow Aura -->
+  <circle cx="256" cy="265" r="160" fill="url(#diyaGlow)"/>
+
+  <!-- Earthen Diya Base (Mitti ka Diya) -->
+  <path d="M166 330 C166 385, 346 385, 346 330 C346 312, 330 305, 316 305 L196 305 C182 305, 166 312, 166 330 Z" fill="url(#clayGrad)"/>
+  <!-- Rim of Diya -->
+  <ellipse cx="256" cy="308" rx="72" ry="14" fill="#B45309" stroke="#F59E0B" stroke-width="2"/>
+
+  <!-- Flame Core -->
+  <path d="M256 195 C275 240, 280 270, 256 295 C232 270, 237 240, 256 195 Z" fill="url(#flameGrad)"/>
+  <ellipse cx="256" cy="275" rx="8" ry="15" fill="#FFFFFF" opacity="0.9"/>
+</svg>

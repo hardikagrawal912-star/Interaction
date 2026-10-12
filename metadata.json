@@ -1,0 +1,6 @@
+{
+  "name": "Light Gayi, Kahani Aayi",
+  "description": "When the lights go out, the stories come on. An Indian family storytelling app designed for power cuts, featuring an offline night sky with stars around a central diya.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

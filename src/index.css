@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Fraunces', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+.font-serif {
+  font-family: 'Fraunces', Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+.font-sans {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Diya candle flame flicker */
+@keyframes diyaFlicker {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.96;
+    filter: drop-shadow(0 0 20px rgba(245, 158, 11, 0.75));
+  }
+  20% {
+    transform: scale(0.96, 1.04) translateY(-1px);
+    opacity: 0.88;
+    filter: drop-shadow(0 0 14px rgba(245, 158, 11, 0.6));
+  }
+  45% {
+    transform: scale(1.03, 0.97) translateY(1px);
+    opacity: 1;
+    filter: drop-shadow(0 0 26px rgba(245, 158, 11, 0.85));
+  }
+  70% {
+    transform: scale(0.98, 1.02) translateY(-0.5px);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 16px rgba(245, 158, 11, 0.65));
+  }
+}
+
+.animate-diya {
+  animation: diyaFlicker 4s ease-in-out infinite;
+}
+
+/* Subtle star twinkling */
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+}
+
+.animate-twinkle {
+  animation: starTwinkle 3.8s ease-in-out infinite;
+}
+
+/* Gentle wave animation for audio playback */
+@keyframes soundBar {
+  0%, 100% {
+    height: 6px;
+  }
+  50% {
+    height: 28px;
+  }
+}
+
+.animate-sound-bar {
+  animation: soundBar 1.2s ease-in-out infinite;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-diya,
+  .animate-twinkle,
+  .animate-sound-bar {
+    animation: none !important;
+  }
+}
